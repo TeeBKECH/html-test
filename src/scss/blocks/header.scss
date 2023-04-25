@@ -1,0 +1,99 @@
+.header {
+  width: 100%;
+  min-height: 10rem;
+  background: rgba($primary_color, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3rem;
+
+  @media (max-width: 576px) {
+    padding: 0 1.5rem;
+  }
+
+  &_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_logo {
+    a {
+      display: inline-block;
+      text-transform: uppercase;
+      color: $text_color;
+      font-weight: 900;
+      font-size: 2.8rem;
+
+      @media (max-width: 576px) {
+        font-size: 2.2rem;
+      }
+
+      span {
+        color: $secondary_color;
+      }
+    }
+  }
+
+  &_nav {
+    $self: &;
+
+    @media (max-width: 991px) {
+      position: fixed;
+      top: 10rem;
+      right: -150%;
+      z-index: 5;
+      background: $primary_color;
+      width: 100%;
+      transition: all 0.2s linear;
+      padding: 3rem 2rem;
+
+      &.active {
+        right: 0;
+      }
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6rem;
+
+      @media (max-width: 576px) {
+        gap: 3rem;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 450px) {
+        flex-direction: column;
+      }
+
+      li {
+        color: $text_color;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+
+        a {
+          color: inherit;
+        }
+
+        &.active {
+          color: $secondary_color;
+          a {
+          }
+        }
+
+        &:hover {
+          color: lighten($secondary_color, 15);
+        }
+      }
+    }
+  }
+
+  &_burger {
+  }
+}

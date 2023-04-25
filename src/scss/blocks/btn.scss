@@ -1,0 +1,36 @@
+.btn {
+  min-width: 15rem;
+  height: 4rem;
+  border-radius: 4px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  &--primary {
+    background: $secondary_color;
+    color: #fff;
+    border: 1px solid #fff;
+
+    &:hover {
+      background: darken($secondary_color, 10);
+      box-shadow: 0 0 1rem rgba(#000, 0.2);
+    }
+  }
+
+  &--secondary {
+    background: #fff;
+    color: #2a2b30;
+    border: 1px solid #6f6d7b;
+
+    &:hover {
+      color: $secondary_color;
+      box-shadow: 0 0 1rem rgba(#000, 0.2);
+    }
+  }
+}
